@@ -96,6 +96,7 @@ class Attention(nn.Module):
         rel_pos_class = RelPosEmb if rel_pos_emb else AbsPosEmb
         
         self.pos_emb = rel_pos_class(fmap_size, dim_head)
+        self.softmax = nn.Softmax(dim=-1)
         
     def forward(self, fmap):
         heads, b, c, h, w = self.heads, *fmap.shape
@@ -105,7 +106,7 @@ class Attention(nn.Module):
         
         sim = einsum('bhid,bhjd->bhij', q, k)
         sim += self.pos_emb(q)
-        attn = sim.softmax(dim=-1)
+        attn = self.softmax(sim)
         
         out = einsum('bhij,bhjd->bhid', attn, v)
         out = rearrange(out, 'b h (x y) d -> b (h d) x y', x=h, y=w)
