@@ -49,3 +49,8 @@ for arr in new_arr:
     dst = os.path.join(train_folder_path, str(arr[1]))
     shutil.copy(src, dst)
 
+
+    
+    
+    
+    
