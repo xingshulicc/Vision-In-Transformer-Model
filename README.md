@@ -10,3 +10,7 @@ The implementation detail about Swin Transformer can refer to:
 
 https://zhuanlan.zhihu.com/p/361366090
 
+
+![image](https://github.com/xingshulicc/Vision-In-Transformer-Model/blob/main/Transformer%20Arc.png)
+
+
