@@ -18,4 +18,4 @@ Swin_Transformer_Stage = Swin_Transformer + Patch_Merge
 
 
 Twins Transformer is coming soon !!! (Twins: Revisiting the Design of Spatial Attention in
-Vision Transformers) paper reading
+Vision Transformers) paper reading...
