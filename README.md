@@ -10,3 +10,6 @@ The implementation detail about Swin Transformer can refer to:
 
 https://zhuanlan.zhihu.com/p/361366090
 
+One Swin Transformer Block = Swin_Transformer_Stage
+
+Swin_Transformer_Stage = Swin_Transformer + Patch_Merge
