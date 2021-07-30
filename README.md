@@ -3,7 +3,8 @@ Apply Transformer Models to Computer Vision Tasks
 
 The implementation about relative position embedding can refer to:
 
-https://theaisummer.com/positional-embeddings/
+https://theaisummer.com/positional-embeddings/: BoT position embedding method 
+
 
 
 The implementation detail about Swin Transformer can refer to:
