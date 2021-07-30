@@ -34,20 +34,39 @@ class StageModule(nn.Module):
             x = regular_block(x)
             x = shifted_block(x)
         return x.permute(0, 3, 1, 2)
-
 # the output shape of StageModule: (batch_size, channels, height, width)
+
 '''
 how to use this module:
-    stage 1
-    stage 2
-    ......
-    stage n
-    
-    self.mlp_head = nn.Sequential(
-            nn.LayerNorm(hidden_dim * 8),
-            nn.Linear(hidden_dim * 8, num_classes)
-        )
-    .......
-    self.mlp_head(x)
-    
+    input hyper-parameters:
+        
+        in_channels: int, the number of input channels
+        
+        hidden_dimension: int, it is the output channels of PatchMerging, and also the input channels for SwinBlock
+        
+        layers: int, its value should be divisible by 2, layers // 2 = the number of W-MSA and SW-MSA blocks
+        
+        downscaling_factor: int, spatial dimension reduction ratio
+        
+        num_heads: int, the number of heads for multi-head self-attention
+        
+        head_dim: int, default is 32
+        
+        window_size: int default is 7
+        
+        relative_pos_embedding: Boolean, use relative position embedding or not
+        
+    note that: the hyper-parameter mlp_dim in SwinBlock is hidden_dimension * 4 (we can change the value of 4 to reduce computation costs)
+        
+    if the input shape of x is (batch_size, channels, height, width), 
+        first, through the PatchMerging, the output shape becomes (batch_size, channels * downscaling_factor **2, height // downscaling_factor, width // downscaling_factor)
+        -> permute -> Linear layer, then the output shape becomes (batch_size, height // downscaling_factor, width // downscaling_factor, hidden_dimension)
+        
+        then, through the SwinBlock, the output shape becomes (batch_size, height // downscaling_factor, width // downscaling_factor, hidden_dimension)
+        -> permute -> (batch_size, hidden_dimension, height // downscaling_factor, width // downscaling_factor)
+        
+        the number of input channels for the second StageModule is hidden_dimension, because the height and width
+        has been reduced to the height // downscaling_factor and width // downscaling_factor, so we need to increase
+        the value of hidden_dimension in the second StageModule, hidden_dimension = hidden_dimension * 2
+        
 '''
