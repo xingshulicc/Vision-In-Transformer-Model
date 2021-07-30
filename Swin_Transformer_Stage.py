@@ -65,8 +65,8 @@ how to use this module:
         then, through the SwinBlock, the output shape becomes (batch_size, height // downscaling_factor, width // downscaling_factor, hidden_dimension)
         -> permute -> (batch_size, hidden_dimension, height // downscaling_factor, width // downscaling_factor)
         
-        the number of input channels for the second StageModule is hidden_dimension, because the height and width
+        the number of input channels for the second StageModule is hidden_dimension, the height and width
         has been reduced to the height // downscaling_factor and width // downscaling_factor, so we need to increase
-        the value of hidden_dimension in the second StageModule, hidden_dimension = hidden_dimension * 2
+        the value of hidden_dimension in the second StageModule to hidden_dimension * 2
         
 '''
