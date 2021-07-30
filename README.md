@@ -16,6 +16,15 @@ One Swin Transformer Block = Swin_Transformer_Stage
 Swin_Transformer_Stage = Swin_Transformer + Patch_Merge
 
 
+Pyramid Vision Transformer-v2 is coming soon !!! 
 
-Twins Transformer is coming soon !!! (Twins: Revisiting the Design of Spatial Attention in
-Vision Transformers) paper reading...
+
+paper reading now:
+
+CoAtNet: Marrying Convolution and Attention for All Data Sizes
+
+Twins: Revisiting the Design of Spatial Attention in Vision Transformers
+
+If you have any question, please send email to me:
+
+xingshuli600@gmail.com
