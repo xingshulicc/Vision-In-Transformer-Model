@@ -35,4 +35,19 @@ class StageModule(nn.Module):
             x = shifted_block(x)
         return x.permute(0, 3, 1, 2)
 
-
+# the output shape of StageModule: (batch_size, channels, height, width)
+'''
+how to use this module:
+    stage 1
+    stage 2
+    ......
+    stage n
+    
+    self.mlp_head = nn.Sequential(
+            nn.LayerNorm(hidden_dim * 8),
+            nn.Linear(hidden_dim * 8, num_classes)
+        )
+    .......
+    self.mlp_head(x)
+    
+'''
