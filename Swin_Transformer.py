@@ -147,7 +147,7 @@ class WindowAttention(nn.Module):
             lambda t: rearrange(t, 'b (nw_h w_h) (nw_w w_w) (h d) -> b h (nw_h nw_w) (w_h w_w) d', 
                                 h=h, w_h=self.window_size, w_w=self.window_size), qkv)
         # the shape of q, k, v is: (batch_size, heads, num_local_windows, local_window_dim, inner_dim)
-        # local_window_dim is: (window_size ** 2, window_size ** 2)
+        # local_window_dim is: (window_size, window_size)
         
         dots = einsum('b h w i d, b h w j d -> b h w i j', q, k) * self.scale
         # the dots is calculated by: q(transpose(k))
