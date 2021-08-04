@@ -28,7 +28,7 @@ stride = math.ceil(kernel_size / 2)
 
 padding = math.floor(stride / 2)
 
-According the paper, I think these defined values are correct.  
+According to the paper, I think these defined values are correct.  
 
 The second different part is:
 
