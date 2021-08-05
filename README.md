@@ -43,7 +43,7 @@ paper reading now:
 
 CoAtNet: Marrying Convolution and Attention for All Data Sizes (The idea of parameter reconstruction in ViT model)
 
-ConViT: Improving Vision Transformers with Soft Convolutional Inductive Biases (Discussion about how to combine Transformer block into CNN)
+Focal Self-attention for Local-Global Interactions in Vision Transformers
 
 Twins: Revisiting the Design of Spatial Attention in Vision Transformers (Discussion about local and global effect on model accuracy)
 
