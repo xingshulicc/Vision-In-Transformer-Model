@@ -50,3 +50,8 @@ Twins: Revisiting the Design of Spatial Attention in Vision Transformers (Discus
 If you have any question, please send email to me:
 
 xingshuli600@gmail.com
+
+
+How to reduce parameters in hybrid model: refer to RepMLP
+
+https://mp.weixin.qq.com/s/FwITC1JEG1vr2Y1ePzSvuw
