@@ -54,7 +54,7 @@ CoAtNet: Marrying Convolution and Attention for All Data Sizes (The idea of para
 
 Focal Self-attention for Local-Global Interactions in Vision Transformers
 
-Twins: Revisiting the Design of Spatial Attention in Vision Transformers (Discussion about local and global effect on model accuracy)
+CSWin Transformer: A General Vision Transformer Backbone with Cross-ShapedWindows (The idea of improving self-attention efficiency)
 
 If you have any question, please send email to me:
 
