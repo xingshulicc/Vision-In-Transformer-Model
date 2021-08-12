@@ -107,6 +107,7 @@ class CoT_Mixer(nn.Module):
         
         out = rearrange(out, 'b (n_h n_w) c -> b c n_h n_w', n_h=H)
         # the output shape of out is: (batch_size, dim, height, width)
+        out = x + out
         
         return out
 
