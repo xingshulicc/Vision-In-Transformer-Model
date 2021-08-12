@@ -38,6 +38,15 @@ The third different part is:
 
 I implemented a StageModule class like Swin Transformer, thereby I can insert this module into any model architecture.
 
+The building block of CoTNet was implemented (paper: Contextual Transformer Networks for Visual Recognition)
+
+I made several changes to this model:
+
+1. I used AdaptiveAveragePool2d to replace LocalConv to reduce computation cost, this part is similar to PVTv2 
+
+2. The original CoTNet does not perform pixel-index attention: K2 = Q * V, this is only channel-index attention. So I added a MLP-mixer to do pixel-index attention in the code.
+
+3. The reason for using SK attention for K1 and K2 fusion is not clear (paper does not explain that), so I deleted the SK attention and added a shortcut connection as a replacement.
 
 paper reading now:
 
