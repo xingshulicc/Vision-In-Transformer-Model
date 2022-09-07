@@ -48,7 +48,7 @@ I made several changes to this model:
 
 3. The reason for using SK attention for K1 and K2 fusion is not clear (paper does not explain that), so I deleted the SK attention and added a shortcut connection as a replacement.
 
-4. The modification of outlook attention: outlook attention improves the fine-grained feature generation
+The modification of outlook attention: outlook attention improves the fine-grained feature generation
 
 1) the output shape of Unfold operation should be:
 
