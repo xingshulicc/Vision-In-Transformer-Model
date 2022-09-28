@@ -62,7 +62,7 @@ new_W = math.floor((W + 2 * self.padding - self.kernel_size + self.stride)/self.
 
 Future work:
 
-Stand_Alone_Self_Attention (SASA) implementation
+Stand_Alone_Self_Attention (SASA) implementation is finished !
 
 The idea of outlook attention and QnA comes from SASA
 
