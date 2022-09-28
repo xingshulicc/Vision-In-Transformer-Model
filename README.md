@@ -64,7 +64,7 @@ The implementation of Stand_Alone_Self_Attention (SASA) is finished !!!
 
 The difference from the official code is: relative position encoding. I referred to the implementation method of Swin-T code: 
 https://github.com/microsoft/Swin-Transformer/blob/main/models/swin_transformer.py. 
-However, the origin point of SASA is fixed, so the shape of the position encoding should be: kernel_size**2, which is different from Swin-T: each point can be the origin point, the shape of position encoding is (window_size**2, window_size**2)
+However, the origin point of SASA is fixed, so the shape of the position encoding should be: kernel_size^2, which is different from Swin-T: each point can be the origin point, the shape of position encoding is (window_size^2, window_size^2)
 
 Future Work:
 
