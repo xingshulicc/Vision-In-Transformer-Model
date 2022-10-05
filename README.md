@@ -66,9 +66,12 @@ The difference from the official code is: relative position encoding. I referred
 https://github.com/microsoft/Swin-Transformer/blob/main/models/swin_transformer.py. 
 However, the origin point of SASA is fixed, so the shape of the position encoding should be: kernel_size^2, which is different from Swin-T: each point can be the origin point, the shape of position encoding is (window_size^2, window_size^2)
 
-Future Work:
 
-QnA: Learned Queries for Efficient Local Attention
+The implementation of QnA: Learned Queries for Efficient Local Attention is finished !!!
+
+The official QnA code is written in JAX (https://github.com/moabarar/qna), I re-implemented it in Pytorch based on the paper. It is very similar to SASA, but the difference is the Queries generation.
+
+Hoping this repositories can give you some help, and best wishes to every researcher working in this field.
 
 In the end, if you have any question, please send email to me:
 
